@@ -5,27 +5,29 @@ import Logo from '../../assets/logo.png';
 
 import { Form, Container, Image } from './styles';
 
-const Login = ( props ) => {
+const Login = ( ) => {
 
     const handleLogin = (e) => {
         e.preventDefault();
+        
         if (!email || !password ){
+
             setError("Preencha e-mail e senha para continuar!");
+
         } else {
             try {
-                if( email == "testewebdev@pertoeducacao.com" || password == "web@dev@2020"){
 
+                if( email == "testewebdev@pertoeducacao.com" || password == "web@dev@2020"){
+                    
                     window.location.href = '/app';
                     
                 }
-            } catch{
+            } catch(error){
+
                  setError("dados incorretos");
+
             }
-            // try {
-            //     props.history.push("/app");
-            // } catch (err) {
-            //     console.log(err);
-            // }
+           
         }
     }; 
 
