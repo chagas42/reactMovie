@@ -22,15 +22,15 @@ export const HeaderArea = styled.div`
     display:flex;
     flex:1;
     width:100%;
-    max-width:1920px;
+    max-width:1024px;
     height:102px; 
-    /* background-color:red; */
     flex-direction:row; 
     justify-content:space-between; 
     align-items:center;
     a {
         cursor: pointer;
     }
+    
 `; 
 
 export const Content = styled.div`
@@ -67,8 +67,8 @@ export const ImageArea = styled.div`
 `; 
 
 export const Image = styled.img`
-    width:350px;
-    height:350px;
+    width:300px;
+    height:300px;
 `;
 
 export const InfoArea = styled.div`
@@ -98,8 +98,9 @@ export const Info = styled.div`
 `;
 
 export const UserName = styled.text`
+    max-width:35px;
     color:white;
-    font-size:22px;
+    font-size:18px;
     &:hover {
         color:#31afb4;
         cursor:pointer;

@@ -25,7 +25,7 @@ const Home = () => {
             <Header>
                 <HeaderArea>    
                     <UserName>{user}</UserName>
-                    <img src={Logo} height={72} />
+                    <img src={Logo} height={72}/>
                     <a href="/login">
                         <img src={LogoutIcon} height={35}/> 
                     </a>

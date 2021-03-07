@@ -5,7 +5,7 @@ export const Container = styled.div`
     flex-direction:column;
     align-items:center; 
     justify-content:center;
-    height:100vh; 
+    height:100%; 
     padding:32px;
     width:100%;
     background-color:#121214;
@@ -13,6 +13,7 @@ export const Container = styled.div`
 
 export const Form = styled.form`
     margin-top:100px;
+    margin-bottom:50px;
     width:100%; 
     max-width:480px;
     background-color:rgb(32, 32, 36);
@@ -66,5 +67,5 @@ export const Form = styled.form`
 `; 
 
 export const Image = styled.img`
-    
+    /* margin-top:25px; */
 `; 

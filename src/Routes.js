@@ -5,12 +5,13 @@ import Login from './pages/login';
 import Home from './pages/home'; 
 
 const isLogged = localStorage.getItem('isLogged'); 
-console.log(isLogged);
+
+console.log(typeof(isLogged));
 
 const PrivateRoute = ({ children, ...rest }) => {
     return(
         <Route {...rest}>
-            {isLogged ? children : <Redirect to="/login"/>}
+            {isLogged == 'true' ? children : <Redirect to="/login"/>}
         </Route>
     ); 
 }; 
