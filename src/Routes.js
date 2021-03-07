@@ -4,7 +4,8 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Login from './pages/login'; 
 import Home from './pages/home'; 
 
-const isLogged = true;
+const isLogged = localStorage.getItem('isLogged'); 
+console.log(isLogged);
 
 const PrivateRoute = ({ children, ...rest }) => {
     return(

@@ -1,10 +1,17 @@
 import React from 'react'; 
 import styled from 'styled-components'; 
 
-const InputEmail = ( {...rest} ) => {
+const InputEmail = ( props ) => {
+    
+
     return(
         <InputArea>
-            <Input {...rest}/>        
+            <Input 
+                onChange={props.onChange} 
+                placeholder={props.placeholder}
+                type={props.type}
+                value={props.value}
+            />        
         </InputArea>
     ); 
 }; 

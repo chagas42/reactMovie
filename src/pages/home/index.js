@@ -15,8 +15,6 @@ import {
 import Movies from '../../movies.json'; 
 import Logo from '../../assets/logo.png';
 
-console.log(Movies[0].titulo);
-
 
 const Home = () => {
     return(
