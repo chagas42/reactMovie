@@ -10,19 +10,26 @@ import {
     Title, 
     Info,
     UserName,
-    LeaveIcon
+    LeaveIcon,
+    HeaderArea
 } from './styles'; 
 import Movies from '../../movies.json'; 
 import Logo from '../../assets/logo.png';
+import LogoutIcon from '../../assets/logout.png'; 
 
+const user = localStorage.getItem('email'); 
 
 const Home = () => {
     return(
         <Container>
             <Header>
-                <UserName>teste</UserName>
-                <img src={Logo} height={72} />
-                <LeaveIcon/>
+                <HeaderArea>    
+                    <UserName>{user}</UserName>
+                    <img src={Logo} height={72} />
+                    <a href="/login">
+                        <img src={LogoutIcon} height={35}/> 
+                    </a>
+                </HeaderArea>
             </Header>
             <Content>
                 {Movies.map((e, i) => {

@@ -10,15 +10,27 @@ export const Container = styled.div`
 `; 
 
 export const Header = styled.div`
-    width:100%;
-    height:102px; 
-    padding-left:35px; 
-    padding-right:35px; 
-    background-color:#202024; 
     display:flex;
+    flex:1;
+    width:100%; 
+    background-color:#202024; 
+    align-items:center;
+    justify-content:center;
+`; 
+
+export const HeaderArea = styled.div`
+    display:flex;
+    flex:1;
+    width:100%;
+    max-width:1920px;
+    height:102px; 
+    /* background-color:red; */
     flex-direction:row; 
     justify-content:space-between; 
     align-items:center;
+    a {
+        cursor: pointer;
+    }
 `; 
 
 export const Content = styled.div`
@@ -31,7 +43,6 @@ export const Content = styled.div`
     justify-content:space-evenly;
     align-items:center;
     margin-top:45px;
-
 `; 
 
 export const MovieArea = styled.div`
@@ -86,8 +97,13 @@ export const Info = styled.div`
     font-style:italic;
 `;
 
-export const UserName = styled.h1`
+export const UserName = styled.text`
     color:white;
+    font-size:22px;
+    &:hover {
+        color:#31afb4;
+        cursor:pointer;
+    }
 `; 
 
-export const LeaveIcon = styled.div``; 
+export const LeaveIcon = styled.img``; 
