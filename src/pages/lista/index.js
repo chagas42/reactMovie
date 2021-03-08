@@ -8,7 +8,9 @@ import {
     Id, 
     Genre, 
     Title, 
-    Year
+    Year, 
+    TitleColumn, 
+    Button
 } from './styles'; 
 
 
@@ -16,34 +18,46 @@ import {
 
 const Lista = () => {
 
-    // useEffect(() => {
-        
-    //     const local = JSON.parse(localStorage.getItem('Movies'));
-    //     setArray(local); 
-    //     console.log(array); 
-    // }, [])
-
     const [array, setArray] = useState(JSON.parse(localStorage.getItem('Movies'))); 
-    console.log(array);
+
+    const handleClick = (i) => {
+       
+        array.splice(i, 1);
+        localStorage.setItem('Movies',JSON.stringify(array));
+        update();
+
+    }; 
+
+    const update = () => {
+        
+        setArray(JSON.parse(localStorage.getItem('Movies')));
+
+    }
+
+   
+
+
 
     return(
         <Container>
             <TableArea>
                 <TableTitle>
-                    <span>Id</span>
-                    <span>Titulo</span>
-                    <span>Gênero</span>
-                    <span>Ano</span>
+                    <TitleColumn size='1' >Id</TitleColumn>
+                    <TitleColumn size='2'>Titulo</TitleColumn>
+                    <TitleColumn size='2'>Gênero</TitleColumn>
+                    <TitleColumn size='2'>Ano</TitleColumn>
                 </TableTitle>
                 <hr/>
                 <ListArea>
                     {array.map((e, i)=>{
+                        
                         return(
                             <ListItem key={i}>
                                 <Id>{e.id}</Id>
                                 <Title>{e.titulo}</Title>
                                 <Genre>{e.genero}</Genre>
                                 <Year>{e.ano}</Year>
+                                <Button onClick={()=>{handleClick(e.id)}} >&#128465;</Button>
                             </ListItem>
                         )
                     })}

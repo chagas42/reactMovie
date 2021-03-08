@@ -28,6 +28,13 @@ const Home = () => {
         .catch((err) => {
             console.error(err); 
         });
+        
+        if(!localStorage.hasOwnProperty('Movies')){
+
+            localStorage.setItem('Movies',JSON.stringify([]));
+
+        }
+
     }, [])
 
     const [ data, setData ] = useState(); 

@@ -27,11 +27,7 @@ export const TableArea = styled.div`
 export const TableTitle = styled.div`
     display:flex;
     flex-direction:row; 
-    span { 
-        flex:1; 
-        font-size:18px; 
-        font-weight:bold;
-    }
+    
 `; 
 
 export const ListArea = styled.div`
@@ -45,9 +41,18 @@ export const ListArea = styled.div`
 export const ListItem = styled.div`
     display:flex; 
     flex:1;
+    align-items:center;
     flex-direction:row;
-    justify-self:flex-start;
+    padding:15px;
+    max-height:50px;
+    border:1px solid black;
     justify-content:space-evenly;
+    &:hover{
+        background-color:#202024; 
+        color:white;
+        cursor:pointer;
+        border-radius:5px;
+    }
 `;
 
 export const Id = styled.div`
@@ -55,13 +60,21 @@ export const Id = styled.div`
 `; 
 
 export const Title = styled.div`
-    flex:1;
+    flex:2;
 `;
 
 export const Genre = styled.div`
-    flex:1;
+    flex:2;
 `; 
 
 export const Year = styled.div`
-    flex:1;
+    flex:2;
 `; 
+
+export const TitleColumn = styled.span`
+    flex:${props => props.size};
+    font-size:18px; 
+
+`; 
+
+export const Button = styled.button``; 

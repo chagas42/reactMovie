@@ -22,6 +22,11 @@ import api from '../../services/api';
 
 const Movie = () => {
     
+    const [ data, setData ] = useState(); 
+    const { id } = useParams(); 
+    const [ fav, setFav ] = useState(false);
+    const list = []; 
+
     useEffect(()=>{
 
         api.get(`server/testes/filmes/${id}`)
@@ -31,32 +36,38 @@ const Movie = () => {
             .catch((error) => {
                 console.error(error); 
             })
-
-        const list = JSON.parse(localStorage.getItem('Movies')); 
         
-        for(let i=0; i<list.length; i++){
+        if(localStorage.hasOwnProperty('Movies')){
 
-            if(list[i].id == id){
-                setFav(!fav);
-            }
+            list.push(JSON.parse(localStorage.getItem('Movies'))); 
+            for(let i=0; i<list[0].length; i++){
+                
+                if(list[0].length > 0){
+                    
+                    if(list[0][i].id == id){
 
-        }       
+                        setFav(true);
+                        
+                    }
+
+                }
+    
+             }       
+        } else { 
+
+            localStorage.setItem('Movies', JSON.stringify(list));
+
+        }    
 
     }, [])
 
+    const addList = (  ) => {
 
-
-    const [ data, setData ] = useState(); 
-
-    const { id } = useParams(); 
-    const [ fav, setFav ] = useState(false);
-    
-
-    const addList = () => {
-        const list = JSON.parse(localStorage.getItem('Movies')); 
-        list.push({id:id, titulo:data.titulo, genero:data.genero, ano:data.ano});
-        localStorage.setItem('Movies', JSON.stringify(list));
+        const lista = JSON.parse(localStorage.getItem('Movies')); 
+        lista.push({id:id, titulo:data.titulo, genero:data.genero, ano:data.ano});
+        localStorage.setItem('Movies', JSON.stringify(lista));
         setFav(!fav); 
+
     }; 
 
 
