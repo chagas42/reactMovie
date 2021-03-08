@@ -34,7 +34,7 @@ const Login = ( ) => {
                     console.log(response);                    
                     if(response.status == 200){
                         setLocalStorage(response.data);
-                        window.location.href = '/app';
+                        window.location.href = '/app/catalogo';
                     }
 
                 }, (error)=>{

@@ -1,7 +1,9 @@
-import React from 'react'; 
+import React, { useState, useEffect } from 'react'; 
+import { Link, useParams } from 'react-router-dom'; 
+
+
 import { 
     Container,
-    Header,
     Content,
     MovieArea,
     ImageArea,
@@ -9,43 +11,48 @@ import {
     Image,
     Title, 
     Info,
-    UserName,
-    LeaveIcon,
-    HeaderArea
 } from './styles'; 
-import Movies from '../../movies.json'; 
-import Logo from '../../assets/logo.png';
-import LogoutIcon from '../../assets/logout.png'; 
 
-const user = localStorage.getItem('email'); 
+import api from '../../services/api'; 
+
+
+
 
 const Home = () => {
+    
+    useEffect(() => {
+        api.get('server/testes/filmes')
+        .then(( response ) => {
+            setData(response.data)
+        })
+        .catch((err) => {
+            console.error(err); 
+        });
+    }, [])
+
+    const [ data, setData ] = useState(); 
     return(
         <Container>
-            <Header>
-                <HeaderArea>    
-                    <UserName>{user}</UserName>
-                    <img src={Logo} height={72}/>
-                    <a href="/login">
-                        <img src={LogoutIcon} height={35}/> 
-                    </a>
-                </HeaderArea>
-            </Header>
             <Content>
-                {Movies.map((e, i) => {
-                    return(
-                    <MovieArea key={i}>
-                        <ImageArea>
-                            <Image src={e.imagem}/>
-                        </ImageArea>
-                        <InfoArea>
-                            <Title>{e.titulo}</Title>
-                            <Info>{e.genero}, {e.ano}</Info>
-                        </InfoArea>
-                    </MovieArea>
-                    )
-                })}
+                {data != undefined &&
+                    data.map((e, i) => {
+                        return(
+                        <Link to={`/app/filme/${e.id}`} key={i} >
+                            <MovieArea >
+                                <ImageArea>
+                                    <Image src={e.imagem}/>
+                                </ImageArea>
+                                <InfoArea>
+                                    <Title>{e.titulo}</Title>
+                                    <Info>{e.genero}, {e.ano}</Info>
+                                </InfoArea>
+                            </MovieArea>
+                        </Link>                  
+                        );
+                    })
+                }               
             </Content>
+
         </Container>
     ); 
 }; 

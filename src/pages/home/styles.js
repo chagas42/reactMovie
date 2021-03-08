@@ -9,30 +9,6 @@ export const Container = styled.div`
     background-color:#121214;
 `; 
 
-export const Header = styled.div`
-    display:flex;
-    flex:1;
-    width:100%; 
-    background-color:#202024; 
-    align-items:center;
-    justify-content:center;
-`; 
-
-export const HeaderArea = styled.div`
-    display:flex;
-    flex:1;
-    width:100%;
-    max-width:1024px;
-    height:102px; 
-    flex-direction:row; 
-    justify-content:space-between; 
-    align-items:center;
-    a {
-        cursor: pointer;
-    }
-    
-`; 
-
 export const Content = styled.div`
     display:flex;
     flex:1;
@@ -97,7 +73,7 @@ export const Info = styled.div`
     font-style:italic;
 `;
 
-export const UserName = styled.text`
+export const UserName = styled.h3`
     max-width:35px;
     color:white;
     font-size:18px;
