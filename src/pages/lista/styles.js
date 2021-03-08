@@ -28,7 +28,7 @@ export const TableTitle = styled.div`
     display:flex;
     flex-direction:row; 
     span { 
-        flex:1; 
+        flex:3; 
         font-size:18px; 
         font-weight:bold;
     }
@@ -55,13 +55,13 @@ export const Id = styled.div`
 `; 
 
 export const Title = styled.div`
-    flex:1;
+    flex:2;
 `;
 
 export const Genre = styled.div`
-    flex:1;
+    flex:2;
 `; 
 
 export const Year = styled.div`
-    flex:1;
+    flex:2;
 `; 
