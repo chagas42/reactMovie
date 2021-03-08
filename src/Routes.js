@@ -21,24 +21,29 @@ const Routes = (props) => {
 
     return(
         <Switch>
-            <PrivateRoute  path='/app/catalogo'>
+            <PrivateRoute  exact path='/app/catalogo'>
                 <Header/>
                 <Home/>
             </PrivateRoute>
+
             <Route path='/login'>
                 <Login/>
             </Route>
+
             <PrivateRoute exact path='/app/filme/:id' >
                 <Header/>
                 <Movie/>
             </PrivateRoute>
+
             <PrivateRoute axact path='/app/lista'>
                 <Header/>
                 <Lista/>
             </PrivateRoute>
-            <Route  path='*'>
-                <h1>Page Not Found</h1>
+
+            <Route exact path='/*'>
+                <Redirect to='/login'/>
             </Route>
+
         </Switch>
     ); 
 }; 

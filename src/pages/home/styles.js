@@ -19,6 +19,9 @@ export const Content = styled.div`
     justify-content:space-evenly;
     align-items:center;
     margin-top:45px;
+    a {
+        text-decoration:none;
+    }
 `; 
 
 export const MovieArea = styled.div`

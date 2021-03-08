@@ -86,13 +86,13 @@ export const MoreButton = styled.button`
     height:50px; 
     width:50px; 
     border-radius:50px; 
-    background-color:#31afb4;
+    background-color:#fff;
     justify-content:center;
     align-items:center;
     font-size:35px;
     font-weight:bold; 
     border: 0px solid none ;
-    color:#fff;
+    color:#31afb4;
     transition:all 0.5s ease;
     &:hover{
         background-color:#fff;
@@ -100,6 +100,21 @@ export const MoreButton = styled.button`
         cursor:pointer;
         border-radius:10px;
     }
+    margin-right:15px;
+`; 
+
+export const AcceptButton = styled.button`
+    display:flex;
+    width:50px; 
+    height:50px; 
+    justify-content:center;
+    align-items:center; 
+    font-size:35px; 
+    font-weight:bold; 
+    background-color:transparent;
+    border:none;
+    color:#31afb4;
+    margin-right:15px;
 `; 
 
 export const List  = styled.div`
@@ -118,6 +133,7 @@ export const ButtonArea = styled.div`
 `; 
 
 export const TextList = styled.h1`
-    margin-left:25px;
     font-size:22px;
 `; 
+
+export const MovieArea = styled.div``; 
