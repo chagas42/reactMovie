@@ -77,4 +77,6 @@ export const TitleColumn = styled.span`
 
 `; 
 
-export const Button = styled.button``; 
+export const Button = styled.button`
+    flex:1;
+`; 

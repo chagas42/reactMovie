@@ -57,7 +57,7 @@ const Lista = () => {
                                 <Title>{e.titulo}</Title>
                                 <Genre>{e.genero}</Genre>
                                 <Year>{e.ano}</Year>
-                                <Button onClick={()=>{handleClick(e.id)}} >&#128465;</Button>
+                                <Button onClick={()=>{handleClick(i)}} >&#128465;</Button>
                             </ListItem>
                         )
                     })}
