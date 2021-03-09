@@ -62,35 +62,27 @@ const Movie = () => {
     }, [])
 
     const addList = (  ) => {
-
         const lista = JSON.parse(localStorage.getItem('Movies')); 
         lista.push({id:id, titulo:data.titulo, genero:data.genero, ano:data.ano});
         localStorage.setItem('Movies', JSON.stringify(lista));
         setFav(!fav); 
-
     }; 
 
-
-
-    
     return(
         <Container>
             {data != undefined && 
             <>
                 <LeftArea >
-
                     <InfoArea>
                         <Info>
                             <Title>{data.titulo}</Title>                    
                             <SubInfo>{data.genero}, {data.ano}</SubInfo>
                         </Info>    
                     </InfoArea>
-                    
                     <SinopseArea>
                         {data.sinopse}
                     </SinopseArea>
                 </LeftArea>
-
                 <RigthArea>
                     <Embed>
                     <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${data.trailerIdYoutube}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -102,14 +94,12 @@ const Movie = () => {
                                 <TextList>Adicionar na listaaaaa</TextList>
                             </ButtonArea>
                         }
-                        {fav == true &&
-            
-                        <ButtonArea>
-                            <AcceptButton>&#10004;</AcceptButton>
-                            <TextList>Adicionado!</TextList>
-                        </ButtonArea>
+                        {fav == true &&           
+                            <ButtonArea>
+                                <AcceptButton>&#10004;</AcceptButton>
+                                <TextList>Adicionado!</TextList>
+                            </ButtonArea>
                         }
-
                     </List>
                 </RigthArea>
             </>

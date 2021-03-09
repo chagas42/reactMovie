@@ -8,7 +8,6 @@ export const Container = styled.div`
     padding:90px; 
     justify-content:center;
 `; 
-
 export const TableArea = styled.div`
     display:flex;
     flex:1;
@@ -23,21 +22,17 @@ export const TableArea = styled.div`
         border:1px solid black;
     }
 `; 
-
 export const TableTitle = styled.div`
     display:flex;
     flex-direction:row; 
     
 `; 
-
 export const ListArea = styled.div`
     margin-top:30px;
     flex:1;
     display:flex;
     flex-direction:column;
-    /* background-color:black; */
 `; 
-
 export const ListItem = styled.div`
     display:flex; 
     flex:1;
@@ -54,29 +49,23 @@ export const ListItem = styled.div`
         border-radius:5px;
     }
 `;
-
 export const Id = styled.div`
     flex:1;
 `; 
-
 export const Title = styled.div`
     flex:2;
 `;
-
 export const Genre = styled.div`
     flex:2;
 `; 
-
 export const Year = styled.div`
     flex:2;
 `; 
-
 export const TitleColumn = styled.span`
     flex:${props => props.size};
     font-size:18px; 
 
 `; 
-
 export const Button = styled.button`
     flex:1;
 `; 

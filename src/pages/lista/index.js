@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'; 
+import React, { useState } from 'react'; 
 import {
     Container, 
     TableArea, 
@@ -14,29 +14,14 @@ import {
 } from './styles'; 
 
 
-
-
 const Lista = () => {
 
     const [array, setArray] = useState(JSON.parse(localStorage.getItem('Movies'))); 
-
-    const handleClick = (i) => {
-       
+    const handleClick = (i) => {  
         array.splice(i, 1);
         localStorage.setItem('Movies',JSON.stringify(array));
-        update();
-
-    }; 
-
-    const update = () => {
-        
         setArray(JSON.parse(localStorage.getItem('Movies')));
-
-    }
-
-   
-
-
+    }; 
 
     return(
         <Container>
@@ -50,7 +35,6 @@ const Lista = () => {
                 <hr/>
                 <ListArea>
                     {array.map((e, i)=>{
-                        
                         return(
                             <ListItem key={i}>
                                 <Id>{e.id}</Id>

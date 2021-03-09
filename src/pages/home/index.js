@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'; 
-import { Link, useParams } from 'react-router-dom'; 
+import { Link } from 'react-router-dom'; 
 
 
 import { 
@@ -15,11 +15,10 @@ import {
 
 import api from '../../services/api'; 
 
-
-
-
 const Home = () => {
     
+    const [ data, setData ] = useState(); 
+
     useEffect(() => {
         api.get('server/testes/filmes')
         .then(( response ) => {
@@ -30,14 +29,10 @@ const Home = () => {
         });
         
         if(!localStorage.hasOwnProperty('Movies')){
-
             localStorage.setItem('Movies',JSON.stringify([]));
-
         }
-
     }, [])
 
-    const [ data, setData ] = useState(); 
     return(
         <Container>
             <Content>
@@ -59,7 +54,6 @@ const Home = () => {
                     })
                 }               
             </Content>
-
         </Container>
     ); 
 }; 

@@ -10,7 +10,6 @@ export const Container = styled.div`
     padding:32px;
     background-color:#121214;
 `;
-
 export const Form = styled.form`
     margin-top:100px;
     margin-bottom:500px;
@@ -24,7 +23,6 @@ export const Form = styled.form`
     padding:64px !important; 
     align-items:center;
     justify-content:space-between;
-
     p {
         color:#ff3333;
         margin-bottom:25px; 
@@ -33,7 +31,6 @@ export const Form = styled.form`
         width:100%; 
         text-align:center;
     }
-
     button {
         color:#fff; 
         font-size:17px; 
@@ -46,14 +43,13 @@ export const Form = styled.form`
         cursor: pointer;
         text-transform:uppercase;
         font-weight:bold;
+        margin-top:20px;
         :hover {
             color:#31afb4;
             background-color:#fff;
             border:1px solid #31afb4;
         }
-        margin-top:20px;
     }
-
     span {
         color:#fff;
         font-size:14px; 
@@ -66,7 +62,5 @@ export const Form = styled.form`
         color:#31afb4
     }
 `; 
-
 export const Image = styled.img`
-    /* margin-top:25px; */
 `; 

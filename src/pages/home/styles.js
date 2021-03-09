@@ -1,5 +1,4 @@
 import styled from 'styled-components'; 
-
 export const Container = styled.div`
     display:flex; 
     flex-direction:column;
@@ -8,7 +7,6 @@ export const Container = styled.div`
     width:100%;
     background-color:#121214;
 `; 
-
 export const Content = styled.div`
     display:flex;
     flex:1;
@@ -23,7 +21,6 @@ export const Content = styled.div`
         text-decoration:none;
     }
 `; 
-
 export const MovieArea = styled.div`
     display:flex; 
     justify-content:center;
@@ -34,22 +31,18 @@ export const MovieArea = styled.div`
     margin-left:10px;
     margin-right:10px;
     border:4px solid #202024;
+    cursor:pointer;
     &:hover {
         border:4px solid #31afb4;
-
     }
-    cursor:pointer;
 `; 
-
 export const ImageArea = styled.div`
     flex:2;
 `; 
-
 export const Image = styled.img`
     width:300px;
     height:300px;
 `;
-
 export const InfoArea = styled.div`
     flex:1;
     display:flex;
@@ -62,28 +55,14 @@ export const InfoArea = styled.div`
     width:100%;
     padding:10px;
 `; 
-
 export const Title = styled.div`
     font-size:18px;
     color:white;
     font-weight:bold;
 `; 
-
 export const Info = styled.div`
     margin-top:15px;
     color:white;
     font-size:19;
     font-style:italic;
 `;
-
-export const UserName = styled.h3`
-    max-width:35px;
-    color:white;
-    font-size:18px;
-    &:hover {
-        color:#31afb4;
-        cursor:pointer;
-    }
-`; 
-
-export const LeaveIcon = styled.img``; 

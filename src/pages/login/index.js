@@ -7,10 +7,10 @@ import api from '../../services/api';
 import { Form, Container, Image } from './styles';
 
 const Login = ( ) => {
+
     const [ email, setEmail ] = useState('');
     const [ password, setPassword ] = useState('');
     const [ error, setError ] = useState('');
-
     const setLocalStorage = ( data ) => {
         localStorage.setItem('token', data.token); 
         localStorage.setItem('isLogged', true);
@@ -21,29 +21,22 @@ const Login = ( ) => {
         e.preventDefault();
         
         if (email === '' || password === '' ){
-
             setError("Preencha e-mail e senha para continuar!");
-
         } else {
-            
                 api.post('/server/testes/login',{
                     "email":email, 
                     "senha":password
                 })
-                .then((response)=>{
-                    console.log(response);                    
+                .then((response)=>{                                     
                     if(response.status == 200){
                         setLocalStorage(response.data);
                         window.location.href = '/app/catalogo';
                     }
-
                 }, (error)=>{
-                    setError("dados incorretos");
-                });
-           
+                    setError('dados incorretos');
+                });      
         }
     }; 
-
 
     return(
         <Container>
