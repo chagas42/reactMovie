@@ -8,19 +8,19 @@
 </h1>
 
 
-## Sobre: 
+## 📝 Sobre: 
 
 Site feito em ReactJS para aprofundar os estudos na tecnologia.
 
 ---
 
-## Tecnólogias utilizadas:
+## 🚀 Tecnólogias utilizadas:
 
 O projeto foi desenvolvido utilizando as seguintes tecnólogias:
 
-- [react-router-dom](https://reactnavigation.org/)
+- [react-router-dom](https://reactrouter.com/web/guides/quick-start)
 - [Redux](https://redux.js.org/)
-- [Axios](https://github.com/react-native-svg/react-native-svg)
+- [Axios](https://github.com/axios/axios)
 - [Style-Components](https://styled-components.com/)
 
 ---
