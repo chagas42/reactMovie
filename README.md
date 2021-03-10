@@ -14,7 +14,7 @@ Site feito em ReactJS para aprofundar os estudos na tecnologia.
 
 ---
 
-## 🚀 Tecnólogias utilizadas:
+## 🚀 Tecnologias utilizadas:
 
 O projeto foi desenvolvido utilizando as seguintes tecnólogias:
 
