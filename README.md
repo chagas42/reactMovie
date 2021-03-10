@@ -28,16 +28,16 @@ O projeto foi desenvolvido utilizando as seguintes tecnólogias:
 
 ```bash
     
-    # Clonar o repositório
+    #Clonar o repositório
     $ git clone https://github.com/chagas42/reactMovie
 
-    # Entrar no diretório
+    #Entrar no diretório
     $ cd reactMovie
 
-    # Instalar as dependências 
+    #Instalar as dependências 
     $ yarn install 
 
-    # Iniciar o projeto
+    #Iniciar o projeto
     $ yarn start
 ```
 Desenvolvido com ❤ por [Junior Chagas](https://github.com/chagas42).
